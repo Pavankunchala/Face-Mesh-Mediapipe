@@ -1,5 +1,5 @@
 mediapipe==0.8.4.2
 numpy==1.18.5
 streamlit==0.82.0
-opencv_python==4.1.1.26
+opencv_python
 Pillow==8.2.0
