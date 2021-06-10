@@ -193,7 +193,7 @@ elif app_mode =='Run on Video':
 
 
     vid.release()
-    out.release()
+    #out.release()
 
 
 elif app_mode =='Run on Image':
