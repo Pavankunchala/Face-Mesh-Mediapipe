@@ -14,7 +14,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_face_mesh = mp.solutions.face_mesh
 
 DEMO_VIDEO = 'demo.mp4'
-OUTM = 'output.mp4'
+OUTM = 'output.webm'
 DEMO_IMAGE = 'demo.jpg'
 
 
@@ -177,7 +177,7 @@ elif app_mode =='Run on Video':
                     connection_drawing_spec=drawing_spec)
 
 
-        #out.write(frame)    
+            #out.write(frame)    
             frame = cv2.resize(frame,(0,0),fx = 0.8 , fy = 0.8)
         
             
@@ -187,6 +187,11 @@ elif app_mode =='Run on Video':
             
 
                 break
+    
+    
+
+
+
                 
 
 
