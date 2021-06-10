@@ -183,10 +183,7 @@ elif app_mode =='Run on Video':
             
             stframe.image(frame,channels = 'BGR',use_column_width=True)
 
-            if cv2.waitKey(5) & 0xFF == 27:
             
-
-                break
     
     
 
