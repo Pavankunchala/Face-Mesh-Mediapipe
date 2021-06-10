@@ -135,7 +135,7 @@ elif app_mode =='Run on Video':
     fps = int(vid.get(cv2.CAP_PROP_FPS))
     #codec = cv2.VideoWriter_fourcc(*FLAGS.output_format)
     codec = cv2.VideoWriter_fourcc('V','P','0','9')
-    out = cv2.VideoWriter('output.webm', codec, fps, (width, height))
+    #out = cv2.VideoWriter('output.webm', codec, fps, (width, height))
 
 
     st.sidebar.text('Input Video')
