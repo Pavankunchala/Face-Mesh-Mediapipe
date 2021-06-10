@@ -178,7 +178,7 @@ elif app_mode =='Run on Video':
 
 
             #out.write(frame)    
-            frame = cv2.resize(frame,(0,0),fx = 0.8 , fy = 0.8)
+            frame = cv2.resize(frame,(0,0),fx = 0.5 , fy = 0.5)
         
             
             stframe.image(frame,channels = 'BGR',use_column_width=True)
@@ -273,21 +273,6 @@ elif app_mode =='Run on Image':
     
 
     
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
 
 
 
