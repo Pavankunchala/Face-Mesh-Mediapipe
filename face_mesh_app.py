@@ -14,7 +14,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_face_mesh = mp.solutions.face_mesh
 
 DEMO_VIDEO = 'demo.mp4'
-OUTM = 'output.webm'
+OUTM = 'output.mp4'
 DEMO_IMAGE = 'demo.jpg'
 
 
@@ -300,36 +300,5 @@ elif app_mode =='Run on Image':
 
         st.image(out_image,use_column_width= True)
 
-        
-
-
-
-
-
-
-
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-
  
-
-
-
-
-
-
-
-
-
 
