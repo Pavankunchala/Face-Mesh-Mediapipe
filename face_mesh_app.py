@@ -2,7 +2,7 @@ import streamlit as st
 
 import mediapipe as mp
 import cv2
-from cv2 import *
+
 
 import numpy as np
 import tempfile
@@ -64,8 +64,11 @@ if app_mode =='About App':
     </style>
     """,
     unsafe_allow_html=True,
-)
-    st.video(OUTM)
+    )
+    dem = open(OUTM,'rb')
+    out_vid = dem.read()
+
+    st.video(out_vid)
 
     st.markdown('''
           # About Author \n 
