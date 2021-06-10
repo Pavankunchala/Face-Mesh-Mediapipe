@@ -188,8 +188,9 @@ elif app_mode =='Run on Video':
 
             ret, frame = vid.read()
 
-            if ret:
-                pass
+            if not ret:
+                continue
+                
                 
                 
             
