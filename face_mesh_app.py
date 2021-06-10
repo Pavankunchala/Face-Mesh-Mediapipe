@@ -188,9 +188,7 @@ elif app_mode =='Run on Video':
 
             ret, frame = vid.read()
 
-            if not ret:
-
-                break
+            
 
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
