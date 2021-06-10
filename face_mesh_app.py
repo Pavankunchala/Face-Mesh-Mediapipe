@@ -188,9 +188,14 @@ elif app_mode =='Run on Video':
 
             ret, frame = vid.read()
 
-            
+            if ret:
+                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                
+            else:
+                print('Video not found')
 
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            
+            
 
             results = face_mesh.process(frame)
 
