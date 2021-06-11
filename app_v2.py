@@ -103,7 +103,7 @@ def main():
     height = int(vid.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = int(vid.get(cv2.CAP_PROP_FPS))
     #codec = cv2.VideoWriter_fourcc(*FLAGS.output_format)
-    codec = cv2.VideoWriter_fourcc('V','P','0','9')
+    codec = cv2.VideoWriter_fourcc('V','P','0','8')
     out = cv2.VideoWriter('output1.webm', codec, fps, (width, height))
 
 
@@ -139,7 +139,7 @@ def main():
 
             frame.flags.writeable = True
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
-            frame = cv2.resize(frame,(0,0),fx = 0.5,fy = 0.5,interpolation = cv2.INTER_AREA)
+            #maxframe = cv2.resize(frame,(0,0),fx = 0.5,fy = 0.5,interpolation = cv2.INTER_AREA)
 
             if results.multi_face_landmarks:
                 for face_landmarks in results.multi_face_landmarks:
