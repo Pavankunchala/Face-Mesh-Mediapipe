@@ -17,6 +17,40 @@ DEMO_VIDEO = 'demo.mp4'
 OUTM = 'output.mp4'
 DEMO_IMAGE = 'demo.jpg'
 
+@st.cache()
+def image_resize(image, width=None, height=None, inter=cv2.INTER_AREA):
+    # initialize the dimensions of the image to be resized and
+    # grab the image size
+    dim = None
+    (h, w) = image.shape[:2]
+
+    # if both the width and height are None, then return the
+    # original image
+    if width is None and height is None:
+        return image
+
+    # check to see if the width is None
+    if width is None:
+        # calculate the ratio of the height and construct the
+        # dimensions
+        r = height / float(h)
+        dim = (int(w * r), height)
+
+    # otherwise, the height is None
+    else:
+        # calculate the ratio of the width and construct the
+        # dimensions
+        r = width / float(w)
+        dim = (width, int(h * r))
+
+    # resize the image
+    resized = cv2.resize(image, dim, interpolation=inter)
+
+    # return the resized image
+    return resized
+
+
+
 def main():
 
     st.title('Face Mesh Application using MediaPipe')
@@ -69,7 +103,7 @@ def main():
     height = int(vid.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = int(vid.get(cv2.CAP_PROP_FPS))
     #codec = cv2.VideoWriter_fourcc(*FLAGS.output_format)
-    codec = cv2.VideoWriter_fourcc('V','P','0','8')
+    codec = cv2.VideoWriter_fourcc('V','P','0','9')
     out = cv2.VideoWriter('output1.webm', codec, fps, (width, height))
 
 
@@ -119,20 +153,13 @@ def main():
             out.write(frame)    
             frame = cv2.resize(frame,(0,0),fx = 0.8 , fy = 0.8)
 
-            #frame = image_resize(image = frame, width = 640)
+            frame = image_resize(image = frame, width = 640)
             
             stframe.image(frame,channels = 'BGR',use_column_width=True)
 
     
 
-    #st.text('Video Processed')
-
-    #output_video = open('output1.webm','rb')
-    #out_bytes = output_video.read()
-    #st.video(out_bytes)
-    
     st.text('Video is Processed')
-
 
         
 
