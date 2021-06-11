@@ -14,7 +14,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_face_mesh = mp.solutions.face_mesh
 
 DEMO_VIDEO = 'demo.mp4'
-OUTM = 'output.mp4'
+OUTM = 'output.webm'
 DEMO_IMAGE = 'demo.jpg'
 
 
@@ -220,7 +220,13 @@ elif app_mode =='Run on Video':
 
             frame = image_resize(image = frame, width = 640)
             
-            stframe.image(frame,channels = 'BGR',use_column_width=True)
+            cv2.imshow('Frame',frame)
+            
+            if cv2.waitKey(5) & 0xFF == 27:
+                
+                break
+            
+            #stframe.image(frame,channels = 'BGR',use_column_width=True)
 
             
     
