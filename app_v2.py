@@ -116,7 +116,7 @@ def main():
                     connection_drawing_spec=drawing_spec)
 
 
-            #out.write(frame)    
+            out.write(frame)    
             frame = cv2.resize(frame,(0,0),fx = 0.8 , fy = 0.8)
 
             #frame = image_resize(image = frame, width = 640)
