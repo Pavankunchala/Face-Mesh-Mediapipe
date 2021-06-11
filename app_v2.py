@@ -69,7 +69,7 @@ def main():
     height = int(vid.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = int(vid.get(cv2.CAP_PROP_FPS))
     #codec = cv2.VideoWriter_fourcc(*FLAGS.output_format)
-    codec = cv2.VideoWriter_fourcc('V','P','0','9')
+    codec = cv2.VideoWriter_fourcc('V','P','0','8')
     out = cv2.VideoWriter('output1.webm', codec, fps, (width, height))
 
 
