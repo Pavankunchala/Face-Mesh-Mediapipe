@@ -139,6 +139,7 @@ def main():
 
             frame.flags.writeable = True
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+            frame = cv2.resize(frame,(0,0),fx = 0.5,fy = 0.5,interpolation = cv2.INTER_AREA)
 
             if results.multi_face_landmarks:
                 for face_landmarks in results.multi_face_landmarks:
@@ -151,7 +152,7 @@ def main():
 
 
             out.write(frame)    
-            frame = cv2.resize(frame,(0,0),fx = 0.8 , fy = 0.8)
+            
 
             frame = image_resize(image = frame, width = 640)
             
