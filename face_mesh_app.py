@@ -218,7 +218,7 @@ elif app_mode =='Run on Video':
             #out.write(frame)    
             #frame = cv2.resize(frame,(0,0),fx = 0.8 , fy = 0.8)
 
-            frame = image_resize(image = frame, width = 640)
+            #frame = image_resize(image = frame, width = 640)
             
             cv2.imshow('Frame',frame)
             
