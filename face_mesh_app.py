@@ -220,13 +220,13 @@ elif app_mode =='Run on Video':
 
             #frame = image_resize(image = frame, width = 640)
             
-            cv2.imshow('Frame',frame)
+            #cv2.imshow('Frame',frame)
             
-            if cv2.waitKey(5) & 0xFF == 27:
+            #if cv2.waitKey(5) & 0xFF == 27:
                 
-                break
+             #   break
             
-            #stframe.image(frame,channels = 'BGR',use_column_width=True)
+            stframe.image(frame,channels = 'BGR',use_column_width=True)
 
             
     
