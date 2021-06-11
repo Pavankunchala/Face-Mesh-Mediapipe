@@ -125,11 +125,13 @@ def main():
 
     
 
-    st.text('Video Processed')
+    #st.text('Video Processed')
 
-    output_video = open('output1.webm','rb')
-    out_bytes = output_video.read()
-    st.video(out_bytes)
+    #output_video = open('output1.webm','rb')
+    #out_bytes = output_video.read()
+    #st.video(out_bytes)
+    
+    st.text('Video is Processed')
 
 
         
